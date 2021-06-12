@@ -15,6 +15,20 @@ void insert_edge(Graph& g, string u, string v, double weight) {
     g[u][v] = weight; 
 }
 
+void DFS(Graph g, string u,st_map& visited,map<int,set<pair<int,string>>> &set_cc,int cc_num, st_map& postvisit,int& clock_dfs){ 
+    visited[u] = 1;
+    set_cc[cc_num].insert(make_pair(clock_dfs,u));  
+    //previsit[u] = clock_dfs; 
+    clock_dfs ++; 
+    for(auto x : g[u]) { 
+        if (visited[x.first] ==0 ) { 
+            DFS(g,x.first,visited,set_cc,cc_num,postvisit,clock_dfs); 
+        }
+    }
+    postvisit[u] = clock_dfs ; 
+    clock_dfs ++; 
+}
+
 void Dijkstra(Graph g, string start, string end) { 
     // tao min_heap
     priority_queue <ipair, vector<ipair> , greater<ipair>> pq; 
