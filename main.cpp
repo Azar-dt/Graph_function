@@ -79,52 +79,6 @@ int main()  {
                 return 0; 
         }
     }  while (1) ; 
-    
-    //read_file(g); 
-    //insert_vertex(g,"F"); 
-    //Graph g_fake = get_reverse_graph(g);
 
-    // for (auto x: g_fake) { 
-    //     cout<<x.first<<endl; 
-    //     for(auto y : g_fake[x.first]) { 
-    //         cout<<x.first<<" "<<y.first<<" "<<y.second<<endl;
-    //     }
-    // }
-    /*
-    read_file(g);
-    
-    // DFS 
-    
-    for(auto x: g) { 
-        if(visited[x.first] == 0) {
-            cc_num++;  
-            DFS(g,x.first,visited,set_cc,cc_num,previsit,postvisit,clock_dfs);
-
-        }
-
-    }
-    for( int i= 1; i<=cc_num; i++) { 
-        //set<pair<int,string>> :: iterator ir; 
-        cout<<"CONNECTED COMPOMENT "<<i<<" : "<<endl;
-        // for(ir = set_cc[i].begin(); ir!=set_cc[i].end(); ++ir) { 
-        //     cout<<*ir.second<<" "<<*ir.first<<" "<<postvisit[*ir]<<endl; 
-        // }
-        for(auto x: set_cc[i]) { 
-            cout<<x.second<<" "<<x.first<<" "<<postvisit[x.second]<<endl; 
-
-        }
-        cout<<endl; 
-    }
-    
-    // DIJKSTRA 
-    cout<<"DIJKSTRA ALGORITHM  : "<<endl;
-    cout<<"NHAP 2 DINH CAN TIM DUONG DI : "<<endl; 
-    string start,end; 
-    cin>>start>>end; 
-    Dijkstra(g,start,end);
-
-    cout<<"PRIM ALGORITHM : "<<endl ; 
-    Prim_mst(g); 
-    */
     return 0  ;
 }
