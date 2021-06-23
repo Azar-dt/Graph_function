@@ -17,6 +17,8 @@ void record_file(int k,int e,int n,int **array,int *color);
 
 void output_file_ColoredGraph(char *filename);
 
+void free_graph(Graph & g);
+
 void read_file_to_create_undirected_graph(Graph& g); 
 
 void read_file_to_create_directed_graph(Graph& g); 
@@ -27,7 +29,7 @@ void insert_edge(Graph& g, string u, string v,double weight);
 
 Graph get_reverse_graph(Graph g); 
 
-void DFS(Graph g, string u,st_map& visited);
+void DFS(Graph g, string u,st_map& visited,map<int,set<pair<int,string>>> &set_cc,int cc_num,st_map& previsit, st_map& postvisit,int& clock_dfs);
 
 void Dijkstra(Graph g, string start, string end); 
 

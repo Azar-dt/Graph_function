@@ -44,10 +44,11 @@ int main()  {
                 Prim_mst(g); 
                 break; 
             case 4: 
+                insert_vertex(g,"F"); 
                 for(auto x: g) { 
                     if(visited[x.first] == 0) {
                         cc_num++;  
-                        DFS(g,x.first,visited);
+                        DFS(g,x.first,visited,set_cc,cc_num,previsit,postvisit,clock_dfs);
 
                     }
 
