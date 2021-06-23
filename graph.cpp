@@ -344,7 +344,6 @@ void Prim_mst(Graph g) {
 
 //sap xep TOPO
 void topo_sort(Graph g){
-    cout<<"cc";
     map<string,int> half_deg;
     map<string,int> nr;
     for(auto u:g){
